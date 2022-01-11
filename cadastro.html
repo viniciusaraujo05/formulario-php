@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,187 +9,147 @@
     <title>Tela de Login</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/stylesheet.css">  
-</head>
-<body>
-    <!-- MENU -->  
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button aria-controls="main-navbar" aria-expanded="false" class="collapsed navbar-toggle"
-                        data-target="#main-navbar" data-toggle="collapse" type="button">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">
-                    <svg>...</svg>
-                </a>
-            </div>
-    
-            <div class="navbar-collapse collapse" id="main-navbar">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                       aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                 </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- FIM MENU  --> 
+    <link rel="stylesheet" href="css/stylesheet.css">
 
-    <!-- FORMULARIO  --> 
-    <div class="container-fluid"> <!-- usa 100% da viewport  --> 
-        <div class="row">
+</head>
+
+<body>
+
+    <!-- FORMULARIO  -->
+    <div>
+        <!-- usa 100% da viewport  -->
+        <div>
             <main>
                 <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4" id="form-cadastro">
                     <form id="form" action="cadastro.php" method="post" enctype="multipart/form-data">
 
                         <fieldset>
                             <legend>Dados de cadastro</legend>
+                            <div class="form__input">
+                                <div class="form-group">
+                                    <label for="nome">Nome:</label>
+                                    <input id="nome" class="form-control" type="text" name="nome" placeholder="Seu nome"
+                                        minlength="2" required="required">
+                                </div>
 
-                            <div class="form-group">
-                                <label for="nome">Nome:</label>
-                                <input id="nome" class="form-control" type="text" name="nome"
-                                       placeholder="Seu nome"
-                                       minlength="2"
-                                       required="required">
+
+                                <div class="form-group">
+                                    <label for="sobrenome">Sobrenome:</label>
+                                    <input id="sobrenome" class="form-control" type="text" name="sobrenome"
+                                        placeholder="Seu sobrenome" minlength="2" required="required">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input id="email" class="form-control" type="email" name="email"
+                                        placeholder="nome@mail.com" required="required">
+                                </div>
                             </div>
-
-                            <div class="form-group">
-                                <label for="sobrenome">Sobrenome:</label>
-                                <input id="sobrenome" class="form-control" type="text" name="sobrenome"
-                                       placeholder="Seu sobrenome"
-                                       minlength="2"
-                                       required="required">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input id="email" class="form-control" type="email" name="email"
-                                       placeholder="nome@mail.com" required="required">
-                            </div>
-
                             <div class="well">
                                 <div class="form-group">
                                     <label for="login">Login:</label>
                                     <input id="login" class="form-control" type="text" name="login"
-                                           placeholder="meunome, mnome"
-                                           minlength="4"
-                                           required="required">
+                                        placeholder="meunome, mnome" minlength="4" required="required">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="senha">Senha:</label>
-                                    <input id="senha" class="form-control" type="password" name="senha"
-                                           minlength="6"
-                                           required="required">
+                                    <input id="senha" class="form-control" type="password" name="senha" minlength="6"
+                                        required="required">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="senha-confirmacao">Confirmação de senha:</label>
                                     <input id="senha-confirmacao" class="form-control" type="password"
-                                           name="senha-confirmacao"
-                                           equalTo="#senha">
+                                        name="senha-confirmacao" equalTo="#senha">
                                 </div>
                             </div>
-                             <!--IMAGEM-->
-                            <div class="form-group">
-                                <label for="file">Avatar:</label>
-                                <input id="file" class="form-control" type="file" name="file">
+                            <!--IMAGEM-->
+                            <div class="well">
+                                <div class="form-group">
+                                    <label for="file">Avatar:</label>
+                                    <input id="file" class="form-control" type="file" name="file">
 
-                                <p class="help-block">JPG, PNG ou GIF.</p>
+                                    <p class="help-block">JPG, PNG ou GIF.</p>
 
-                                <img id="avatar" data-src="holder.js/180x180" src="" alt="Avatar">
+                                    <img id="avatar" data-src="holder.js/180x180" src="" alt="Avatar">
+                                </div>
                             </div>
                         </fieldset>
 
                         <fieldset>
                             <legend>Dados pessoais</legend>
+                            <div class="well">
+                                <div class="form-group">
+                                    <label for="data-nascimento">Data de nascimento:</label>
+                                    <input id="data-nascimento" class="form-control" type="text" name="data-nascimento">
+                                </div>
 
-                            <div class="form-group">
-                                <label for="data-nascimento">Data de nascimento:</label>
-                                <input id="data-nascimento" class="form-control" type="text" name="data-nascimento">
-                            </div>
+                                <div class="form-group">
+                                    <label for="genero">Gênero:</label>
+                                    <select id="genero" class="form-control" name="genero">
+                                        <option value="M">Masculino</option>
+                                        <option value="F">Feminino</option>
+                                    </select>
+                                </div>
 
-                            <div class="form-group">
-                                <label for="genero">Gênero:</label>
-                                <select id="genero" class="form-control" name="genero">
-                                    <option value="M">Masculino</option>
-                                    <option value="F">Feminino</option>
-                                </select>
-                            </div>
+                                <div class="form-group">
+                                    <label for="cpf">CPF:</label>
+                                    <input id="cpf" class="form-control" type="text" name="cpf">
+                                </div>
 
-                            <div class="form-group">
-                                <label for="cpf">CPF:</label>
-                                <input id="cpf" class="form-control" type="text" name="cpf">
-                            </div>
+                                <div class="form-group">
+                                    <label for="rg">RG:</label>
+                                    <input id="rg" class="form-control" type="text" name="rg">
+                                </div>
 
-                            <div class="form-group">
-                                <label for="rg">RG:</label>
-                                <input id="rg" class="form-control" type="text" name="rg">
-                            </div>
+                                <div class="form-group">
+                                    <label for="endereco">Endereço:</label>
+                                    <input id="endereco" class="form-control" type="text" name="endereco">
+                                </div>
 
-                            <div class="form-group">
-                                <label for="endereco">Endereço:</label>
-                                <input id="endereco" class="form-control" type="text" name="endereco">
-                            </div>
+                                <div class="form-group">
+                                    <label for="uf">UF:</label>
+                                    <select id="uf" class="form-control" name="uf">
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espirito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
 
-                            <div class="form-group">
-                                <label for="uf">UF:</label>
-                                <select id="uf" class="form-control" name="uf">
-                                    <option value="AC">Acre</option>
-                                    <option value="AL">Alagoas</option>
-                                    <option value="AP">Amapá</option>
-                                    <option value="AM">Amazonas</option>
-                                    <option value="BA">Bahia</option>
-                                    <option value="CE">Ceará</option>
-                                    <option value="DF">Distrito Federal</option>
-                                    <option value="ES">Espirito Santo</option>
-                                    <option value="GO">Goiás</option>
-                                    <option value="MA">Maranhão</option>
-                                    <option value="MS">Mato Grosso do Sul</option>
-                                    <option value="MT">Mato Grosso</option>
-                                    <option value="MG">Minas Gerais</option>
-                                    <option value="PA">Pará</option>
-                                    <option value="PB">Paraíba</option>
-                                    <option value="PR">Paraná</option>
-                                    <option value="PE">Pernambuco</option>
-                                    <option value="PI">Piauí</option>
-                                    <option value="RJ">Rio de Janeiro</option>
-                                    <option value="RN">Rio Grande do Norte</option>
-                                    <option value="RS">Rio Grande do Sul</option>
-                                    <option value="RO">Rondônia</option>
-                                    <option value="RR">Roraima</option>
-                                    <option value="SC">Santa Catarina</option>
-                                    <option value="SP">São Paulo</option>
-                                    <option value="SE">Sergipe</option>
-                                    <option value="TO">Tocantins</option>
-                                </select>
-                            </div>
+                                <div class="form-group">
+                                    <label for="cep">CEP:</label>
+                                    <input id="cep" class="form-control" type="text" name="cep">
+                                </div>
 
-                            <div class="form-group">
-                                <label for="cep">CEP:</label>
-                                <input id="cep" class="form-control" type="text" name="cep">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="telefone">Telefone:</label>
-                                <input id="telefone" class="form-control" type="text" name="telefone">
+                                <div class="form-group">
+                                    <label for="telefone">Telefone:</label>
+                                    <input id="telefone" class="form-control" type="text" name="telefone">
+                                </div>
                             </div>
                         </fieldset>
 
@@ -221,9 +182,17 @@
             </aside>
         </div>
     </div>
-    <!--  FIM FORMULARIO  --> 
 
-    <!-- CHAMANDO SCRIPTS   --> 
+    <!--  FIM FORMULARIO  -->
+
+    <!--  ANIMAÇÃO -->
+    <svg class="wave-top" width="100" viewBox="0 0 1200 250">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M0,256L110.8,256L221.5,288L332.3,224L443.1,64L553.8,0L664.6,288L775.4,160L886.2,192L996.9,32L1107.7,192L1218.5,64L1329.2,288L1440,288L1440,320L1329.2,320L1218.5,320L1107.7,320L996.9,320L886.2,320L775.4,320L664.6,320L553.8,320L443.1,320L332.3,320L221.5,320L110.8,320L0,320Z"
+            fill="#0099FF" />
+    </svg>
+
+    <!-- CHAMANDO SCRIPTS   -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
@@ -234,8 +203,8 @@
     <script src="js/localfilereader.js"></script>
     <script src="js/validate.js"></script>
     <script src="js/mask.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js'></script><script  src="js/animacao.js"></script>
 
 </body>
+
 </html>
-
-

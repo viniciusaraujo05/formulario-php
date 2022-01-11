@@ -27,3 +27,26 @@ main {
     margin: 10px auto;
     display: block;
 }
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #272727;
+}
+
+fieldset {
+    min-width: 9;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+
+.wave-top {
+    position: absolute;
+    top: 90;
+    left: 0;
+    width: 100%;
+  }
